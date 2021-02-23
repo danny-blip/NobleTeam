@@ -1,5 +1,11 @@
 # Manejo de discos
 ## Identificar y describir las diferencias entre hda, sda y vda. Además, explicar qué significa la letra y el número al final de los identificadores
+### Los nombres de los discos y particiones de los diferentes sistemas operativos se les otorgan diferentes nombres, por ejemplo:
+### Para MS-DOS y Windows, los dispositivos suelen llamarse por letras (A, B, C, D...):
+..* Unidad A: primera unidad de disquetes
+..* Unidad B: segunda unidad de disquetes
+..* Unidad C: primera unidad de disco duro
+..* Unidad D: primera unidad de CD/DVD
 ## ¿Cómo montar y desmontar una USB en el sistema por terminal?
 ## Enlistar la información de los dispositivos de bloque conectados aunque no estén montados en terminal
 ## Mostrar la tabla de particiones del disco donde está instalado el sistema operativo en terminal
