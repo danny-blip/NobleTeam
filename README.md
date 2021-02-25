@@ -51,16 +51,12 @@
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/2b.png "2b")
 
 ## Enlistar la información de los dispositivos de bloque conectados aunque no estén montados en terminal
-* Abrir la línea de comandos.
-*	Dentro de la línea de comandos, colocar el comando lsblk.
-*	El comando anterior, proviene de la abreviatura (List Block Devices).
-*	Este comando obtiene un enlistado de todos los dispositivos de bloque que estén o no estén montados.
-*	Al colocar el comando y presionar la tecla «intro», despliega la siguiente información:
+*	Ejecutar el comando `lsblk` (este comando proviene de la abreviatura «List Block Devices»).
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/3a.png "3a")
 
-* En la primera columna del enlistado, se tiene un campo llamado «Name», la cual nos menciona el nombre del dispositivo o de la partición.
-*	En la segunda columna de la tabla, se pude apreciar que hay un campo llamado «Maj:Min» los cuales se explican a continuación:
+* En la primera columna del enlistado, se tiene un campo llamado «Name», el cual indica el nombre del dispositivo o de la partición.
+*	En la segunda columna de la tabla, se tiene un campo llamado «Maj:Min», que se explica a continuación:
 1. El término «Maj» hace referencia al término «major».
 2. El término "Min" hace referencia al término «minor».
 3. Estos términos mencionados anteriormente, es la forma la cual el Kernel mediante números enteros se refiere a los dispositivos de manera interna.
