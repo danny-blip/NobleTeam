@@ -83,11 +83,11 @@
 3. loop: un pseudodispositivo que permite que un dispositivo sea accesible como un dispositivo de bloque.
 * En el último campo de la tabla se hace referencia al punto de montaje de cada partición o del dispositivo de bloques.
 * Dentro de este comando, hay ciertas variaciones, las cuales se explican a continuación:
-14. `lsblk -a` despliega los dispositivos vacíos, como se puede observar en la imagen, se puede ver que, en la parte de «NAME», hay un campo llamado «loop 7», el cual no aparece en la imagen anterior.
+1. `lsblk -a` despliega los dispositivos vacíos, como se puede observar en la imagen, se puede ver que, en la parte de «NAME», hay un campo llamado «loop 7», el cual no aparece en la imagen anterior.
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/3e.png "3e")
 
-16. `lsblk -o` muestra la tabla de los dispositivos de bloque de manera personalizada. En este ejemplo, se desplegará el nombre y el tamaño. Como puede verse en el ejemplo a continuación, se tiene que escribir el comando que está escrito al principio de la viñeta. Después, se deja un espacio y se escriben los nombre de las columnas que se desean que aparezcan; si es más de un elemento, van separados por comas.
+2. `lsblk -o` muestra la tabla de los dispositivos de bloque de manera personalizada. En este ejemplo, se desplegará el nombre y el tamaño. Como puede verse en el ejemplo a continuación, se tiene que escribir el comando que está escrito al principio de la viñeta. Después, se deja un espacio y se escriben los nombre de las columnas que se desean que aparezcan; si es más de un elemento, van separados por comas.
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/3f.png "3f")
 
