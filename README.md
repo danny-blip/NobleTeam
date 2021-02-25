@@ -34,7 +34,7 @@
 * 16 = `/dev/vdb` -> Segunda partición en la primera unidad de disco Xen VBD del sistema.
 * 240 = `/dev/vdp` -> Decimosexta partición en la primera unidad de disco Xen VBD del sistema.
 ###### La enumeración, es decir, las particiones de vda, se manejan de la misma manera que los discos IDE, las particiones pueden llegar hasta 15 bits.
-###### La diferencia entre `hda`, `sda` y `vda` es que hda es la partición de disco maestro IDE, mientras que sda son las particiones de disco externo detectado emulado sin que el s.o. invitado sepa que se está ejecutando, mientras que el vda el s.o. invitado está consciente de que se ejecuta y de que es un disco virtual en la nube que emula lo que hace un `sda`, pero sin la necesidad de hardware.
+###### La diferencia entre `hda`, `sda` y `vda` es que hda es la partición de disco maestro IDE, mientras que sda son las particiones de disco externo detectado emulado sin que el s.o. invitado sepa que se está ejecutando, mientras que el `vda` el s.o. invitado está consciente de que se ejecuta y de que es un disco virtual en la nube que emula lo que hace un `sda`, pero sin la necesidad de hardware.
 ## ¿Cómo montar y desmontar una USB en el sistema por terminal?
 ###### Primero, se debe saber qué dispositivos están montados, para eso, se utiliza el siguiente comando:
 * `df -h`
