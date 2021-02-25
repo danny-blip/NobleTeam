@@ -14,7 +14,7 @@
 ###### Por otro lado, existen varios tipos de particiones:
 * Primarias: como máximo 4.
 * Extendidas: como máximo 1 (en este caso, tres primarias como máximo).
-* Lógicas: casi todas las que se deseen, estas están dentro de una extendida.
+* Lógicas: casi todas las que se deseen, existen dentro de las extendidas.
 ###### La numeración al final de los identificadores corresponde al tipo de partición, por ejemplo, si se tiene:
 ###### `/dev/hda4` -> El 4 indica que es la cuarta particion.
 ###### Se sabe que el máximo de particiones primarias que pueden tenerse son 4. Si se tiene una partición extendida, se le asignaría la partición 4. A partir de la partición 5, las particiones son lógicas.
