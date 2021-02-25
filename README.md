@@ -41,7 +41,7 @@
 ###### Para desmontar una USB en terminal se utiliza el siguiente comando:
 * `sudo umount /dev/sdb1`
 
-![alt text](https://github.com/danny-blip/NobleTeam/blob/main/2a.png "2a")
+![alt text](https://github.com/danny-blip/NobleTeam/blob/main/2A.png "2a")
 
 ###### Para montar una USB en terminal se utilizan los siguientes comandos (en este caso, se montará en una carpeta en el escritorio llamada USB):
 * `cd Escritorio/`
