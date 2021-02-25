@@ -19,14 +19,24 @@
 ###### /dev/hda4 -> El 4 indica que es la cuarta particion.
 ###### Se sabe que el máximo de particiones primarias que pueden tenerse son 4. Si se tiene una partición extendida, se le asignaría la partición 4. A partir de la partición 5, las particiones son lógicas.
 ###### /dev/hda5 -> Primera partición lógica.
-###### Cuando se habla de /dev/sda, debe entenderse que se refiere al primer disco detectado de tipo IDE, SATA, SCSI emulado completamente virtualizado por el hipervisor. Donde el sistema operativo invitado no sabe que está ejecutándose sobre un hipervisor, es decir, no sabe que está virtualizado y no requiere de cambios para funcionar en la configuración.
-*La primera unidad de disco SCSI (identificación SCSI address-wise) se llama /dev/sda.
-*La segunda unidad de disco SCSI (address-wise) se llama /dev/sdb, y así sucesivamente.
+###### Cuando se habla de /dev/sda, debe entenderse que se refiere al primer disco detectado de tipo IDE, SATA, SCSI emulado y virtualizado por el hipervisor, en donde el sistema operativo invitado no sabe que está ejecutándose sobre un hipervisor, es decir, no sabe que está virtualizado y no requiere de cambios para funcionar en la configuración.
+* La primera unidad de disco SCSI (identificación SCSI address-wise) se llama /dev/sda.
+* La segunda unidad de disco SCSI (address-wise) se llama /dev/sdb, y así sucesivamente.
 ###### Las particiones en cada disco se enumeran según el número de particiones por unidad de disco, es decir, si se tiene un sistema de dos discos con dirección SCSI 2 que se llama /dev/sda y SCSI 4 se llama /dev/sdb.
 ###### Si existen dos particiones de /dev/sda, se enumeran de la siguiente forma:
 * /dev/sda1 -> 1° partición en la primera unidad de disco SCSI del sistema.
 * /dev/sda2 -> 2° partición en la primera unidad de disco SCSI del sistema.
 ###### Lo mismo aplica al disco /dev/sdb y sus particiones.
+###### En la paravirtualización, el sistema operativo invitado es consciente de que está siendo ejecutado en un hipervisor y de que incluye código para que las transiciones de invitado a hipervisor sean eficientes.
+###### Todos los archivos /dev/vda se localizan en el espacio asignado de la máquina virtual.
+###### Ejemplo de Xen Virtual Block Device:
+*	0 = /dev/vda -> primera partición en la primera unidad de disco Xen VBD del sistema.
+*	16 = /dev/vdb -> segunda partición en la primera unidad de disco Xen VBD del sistema.
+*	240 = /dev/vdp -> decimosexta partición en la primera unidad de disco Xen VBD del sistema.
+###### La enumeración, es decir, las particiones de vda, se manejan de la misma manera que los discos IDE, las particiones pueden llegar hasta 15 bits.
+###### La diferencia entre hda, sda y vda es que hda es la partición de disco maestro IDE, mientras que sda son las particiones de disco externo detectado emulado sin que el s.o. invitado sepa que se está ejecutando, mientras que el vda el s.o. invitado está consciente de que se ejecuta y de que es un disco virtual en la nube que emula lo que hace un sda, pero sin la necesidad de hardware.
+
+
 ## ¿Cómo montar y desmontar una USB en el sistema por terminal?
 ## Enlistar la información de los dispositivos de bloque conectados aunque no estén montados en terminal
 ## Mostrar la tabla de particiones del disco donde está instalado el sistema operativo en terminal
