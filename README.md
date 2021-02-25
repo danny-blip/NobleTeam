@@ -30,9 +30,9 @@
 ###### En la paravirtualización, el sistema operativo invitado es consciente de que está siendo ejecutado en un hipervisor y de que incluye código para que las transiciones de invitado a hipervisor sean eficientes.
 ###### Todos los archivos /dev/vda se localizan en el espacio asignado de la máquina virtual.
 ###### Ejemplo de Xen Virtual Block Device:
-*	0 = /dev/vda -> primera partición en la primera unidad de disco Xen VBD del sistema.
-*	16 = /dev/vdb -> segunda partición en la primera unidad de disco Xen VBD del sistema.
-*	240 = /dev/vdp -> decimosexta partición en la primera unidad de disco Xen VBD del sistema.
+* 0 = /dev/vda -> primera partición en la primera unidad de disco Xen VBD del sistema.
+* 16 = /dev/vdb -> segunda partición en la primera unidad de disco Xen VBD del sistema.
+* 240 = /dev/vdp -> decimosexta partición en la primera unidad de disco Xen VBD del sistema.
 ###### La enumeración, es decir, las particiones de vda, se manejan de la misma manera que los discos IDE, las particiones pueden llegar hasta 15 bits.
 ###### La diferencia entre hda, sda y vda es que hda es la partición de disco maestro IDE, mientras que sda son las particiones de disco externo detectado emulado sin que el s.o. invitado sepa que se está ejecutando, mientras que el vda el s.o. invitado está consciente de que se ejecuta y de que es un disco virtual en la nube que emula lo que hace un sda, pero sin la necesidad de hardware.
 ## ¿Cómo montar y desmontar una USB en el sistema por terminal?
@@ -40,15 +40,20 @@
 * df -h
 ###### Para desmontar una USB en terminal se utiliza el siguiente comando:
 * umount /dev/sdb1
+![alt text](https://github.com/danny-blip/NobleTeam/blob/main/2c.png "2c")
 ###### Para montar una USB en terminal se utilizan los siguientes comandos (en este caso, se montará en una carpeta en el escritorio llamada USB):
 * cd Escritorio/
 * mkdir USB
 * sudo mount /dev/sdb1 USB
+![alt text](https://github.com/danny-blip/NobleTeam/blob/main/2a.png "2a")
+![alt text](https://github.com/danny-blip/NobleTeam/blob/main/2b.png "2b")
 ## Enlistar la información de los dispositivos de bloque conectados aunque no estén montados en terminal
 ## Mostrar la tabla de particiones del disco donde está instalado el sistema operativo en terminal
 ## Conectar una memoria USB y mostrar su tabla de particiones en terminal
 ###### Para mostrar las tablas de particiones, se utiliza el siguiente comando:
 * sudo fdisk -l
+![alt text](https://github.com/danny-blip/NobleTeam/blob/main/5a.png "5a")
+![alt text](https://github.com/danny-blip/NobleTeam/blob/main/5b.png "5b")
 ## Borrar todas las particiones de la USB en terminal
 * sudo fdisk /dev/sdb
 * d
@@ -57,6 +62,7 @@
 * p
 * w
 * q
+![alt text](https://github.com/danny-blip/NobleTeam/blob/main/6a.png "6a")
 ## Crear tres particiones físicas y una extendida en la USB
 * sudo fdisk /dev/sdb
 * n
@@ -66,13 +72,15 @@
 * Introducir el tamaño de la partición, por ejemplo, "+1024M" para 1 GB
 * Introducir "p" para ver la tabla de particiones
 * Repetir para el número de particiones deseadas
+![alt text](https://github.com/danny-blip/NobleTeam/blob/main/7a.png "7a")
+![alt text](https://github.com/danny-blip/NobleTeam/blob/main/7b.png "7b")
 ## Crear una partición lógica dentro de la partición extendida de la USB en terminal
 * Se necesitan 3 particiones físicas y una partición extendida
 * sudo fdisk /dev/sdb
 * n
 * Automáticamente se creará una partición lógica dentro de la extendida seleccionada
 * Introducir el punto de partida (se recomienda el valor por defecto)
-* Introducir el tamaño de la partición, por ejemplo, "+512M" (debe ser menor al tamaño de la partición
-	que la contiene)
+* Introducir el tamaño de la partición, por ejemplo, "+512M" (debe ser menor al tamaño de la partición que la contiene)
+![alt text](https://github.com/danny-blip/NobleTeam/blob/main/8a.png "8a")
 ## En la interfaz gráfica de la aplicación "Discos", borrar las particiones para que solo exista una partición que abarque toda la USB
 ## Copiar un archivo .iso de distribución live de linux a la USB por medio del comando "dd"
