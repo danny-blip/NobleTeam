@@ -40,11 +40,13 @@
 * df -h
 ###### Para desmontar una USB en terminal se utiliza el siguiente comando:
 * umount /dev/sdb1
+
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/2c.png "2c")
 ###### Para montar una USB en terminal se utilizan los siguientes comandos (en este caso, se montará en una carpeta en el escritorio llamada USB):
 * cd Escritorio/
 * mkdir USB
 * sudo mount /dev/sdb1 USB
+
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/2a.png "2a")
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/2b.png "2b")
 ## Enlistar la información de los dispositivos de bloque conectados aunque no estén montados en terminal
@@ -100,6 +102,7 @@
 * p
 * w
 * q
+
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/6a.png "6a")
 ## Crear tres particiones físicas y una extendida en la USB
 * sudo fdisk /dev/sdb
@@ -110,6 +113,7 @@
 * Introducir el tamaño de la partición, por ejemplo, "+1024M" para 1 GB
 * Introducir "p" para ver la tabla de particiones
 * Repetir para el número de particiones deseadas
+
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/7a.png "7a")
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/7b.png "7b")
 ## Crear una partición lógica dentro de la partición extendida de la USB en terminal
@@ -119,23 +123,33 @@
 * Automáticamente se creará una partición lógica dentro de la extendida seleccionada
 * Introducir el punto de partida (se recomienda el valor por defecto)
 * Introducir el tamaño de la partición, por ejemplo, "+512M" (debe ser menor al tamaño de la partición que la contiene)
+
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/8a.png "8a")
 ## En la interfaz gráfica de la aplicación "Discos", borrar las particiones para que solo exista una partición que abarque toda la USB
 ###### Abrir la aplicación Discos en Ubuntu
+
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9a.png "9a")
 ###### Seleccionar la partición a borrar
+
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9b.png "9b")
 ###### Eliminar la partición
+
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9c.png "9c")
 ###### Repetir con todas las demás particiones, excepto la uno. Una vez que se tenga solo la primera partición, se selecciona y se da clic en el engranaje.
+
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9d.png "9d")
 ###### Seleccionar la barrita de tamaño actual y arrastratla toda a la derecha para utilizar todo el almacenamiento para esa partición.
+
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9e.png "9e")
+
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9f.png "9f")
 ###### ¡Y listo!
+
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9g.png "9g")
 ## Copiar un archivo .iso de distribución live de linux a la USB por medio del comando "dd"
 ###### Descargar un archivo iso de la distribución Linux deseada. Para este caso, se utilizará Kali Linux. Una vez que el archivo esté descargado, se abre la terminal y se ejecutan los siguientes comandos.
+
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/10a.png "10a")
 ###### Se tardará unos minutos dependiendo de la capacidad de la USB.
+
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/10b.png "10b")
