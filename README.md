@@ -122,24 +122,24 @@
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/5b.png "5b")
 
 ## Borrar todas las particiones de la USB en terminal
-* sudo fdisk /dev/sdb
-* d
+* `sudo fdisk /dev/sdb`
+* `d`
 * Introducir el número de partición a borrar. Si solo se tiene una, se seleccionará de manera automática
 * Reperir para las particiones que se deseen borrar.
-* p
-* w
-* q
+* `p`
+* `w`
+* `q`
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/6a.png "6a")
 
 ## Crear tres particiones físicas y una extendida en la USB
-* sudo fdisk /dev/sdb
-* n
-* p
+* `sudo fdisk /dev/sdb`
+* `n`
+* `p`
 * Introducir el número de partición (se recomienda el valor por defecto)
 * Introducir el punto de partida (se recomienda el valor por defecto)
 * Introducir el tamaño de la partición, por ejemplo, "+1024M" para 1 GB
-* Introducir "p" para ver la tabla de particiones
+* Introducir `p` para ver la tabla de particiones
 * Repetir para el número de particiones deseadas
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/7a.png "7a")
@@ -148,15 +148,15 @@
 
 ## Crear una partición lógica dentro de la partición extendida de la USB en terminal
 * Se necesitan 3 particiones físicas y una partición extendida
-* sudo fdisk /dev/sdb
-* n
+* `sudo fdisk /dev/sdb`
+* `n`
 * Automáticamente se creará una partición lógica dentro de la extendida seleccionada
 * Introducir el punto de partida (se recomienda el valor por defecto)
 * Introducir el tamaño de la partición, por ejemplo, "+512M" (debe ser menor al tamaño de la partición que la contiene)
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/8a.png "8a")
 
-## En la interfaz gráfica de la aplicación "Discos", borrar las particiones para que solo exista una partición que abarque toda la USB
+## En la interfaz gráfica de la aplicación «Discos», borrar las particiones para que solo exista una partición que abarque toda la USB
 ###### Abrir la aplicación Discos en Ubuntu
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9a.png "9a")
