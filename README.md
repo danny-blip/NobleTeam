@@ -24,8 +24,8 @@
 * La segunda unidad de disco SCSI (address-wise) se llama `/dev/sdb`, y así sucesivamente.
 ###### Las particiones en cada disco se enumeran según el número de particiones por unidad de disco, es decir, si se tiene un sistema de dos discos con dirección SCSI 2 que se llama `/dev/sda` y SCSI 4 se llama `/dev/sdb`. ***************
 ###### Si existen dos particiones de `/dev/sda`, se enumeran de la siguiente forma:
-* `/dev/sda1` -> 1° partición en la primera unidad de disco SCSI del sistema.
-* `/dev/sda2` -> 2° partición en la primera unidad de disco SCSI del sistema.
+* `/dev/sda1` -> Primera partición en la primera unidad de disco SCSI del sistema.
+* `/dev/sda2` -> Segunda partición en la primera unidad de disco SCSI del sistema.
 ###### Lo mismo aplica al disco `/dev/sdb` y sus particiones.
 ###### En la paravirtualización, el sistema operativo invitado es consciente de que está siendo ejecutado en un hipervisor y de que incluye código para que las transiciones de invitado a hipervisor sean eficientes.
 ###### Todos los archivos `/dev/vda` se localizan en el espacio asignado de la máquina virtual.
