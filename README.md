@@ -8,13 +8,13 @@
 * Unidad D: primera unidad de CD/DVD
 ###### En Linux se otorgan diferentes nombres en los discos, y las particiones llegan a ser diferentes a las de otros sistemas operativos. A cada dispositivo se le otorga su posición y partucuones. Linux necesita conocer el nombre de los dispositivos para crear y montal sus particiones en disco.
 ###### En Linux el nombre de cualquier dispositivo empieza por /dev/ (device).
-*Para el disco maestro en el controlador IDE primario se le llama /dev/hda
-*Para el disco esclavo del controlador IDE primario se le llama /dev/hdb
-*Para el disco maestro y esclavo del controlador IDE secundario se le denomina /dev/hdc y /dev/hdd
+* Para el disco maestro en el controlador IDE primario se le llama /dev/hda
+* Para el disco esclavo del controlador IDE primario se le llama /dev/hdb
+* Para el disco maestro y esclavo del controlador IDE secundario se le denomina /dev/hdc y /dev/hdd
 ###### Por otro lado, existen varios tipos de particiones:
-*Primarias: como máximo 4.
-*Extendidas: como máximo 1 (en este caso, tres primarias como máximo).
-*Lógicas: casi todas las que se deseen, estas están dentro de una extendida.
+* Primarias: como máximo 4.
+* Extendidas: como máximo 1 (en este caso, tres primarias como máximo).
+* Lógicas: casi todas las que se deseen, estas están dentro de una extendida.
 ###### La numeración al final de los identificadores corresponde al tipo de partición, por ejemplo, si se tiene:
 ###### /dev/hda4 -> El 4 indica que es la cuarta particion.
 ###### Se sabe que el máximo de particiones primarias que pueden tenerse son 4. Si se tiene una partición extendida, se le asignaría la partición 4. A partir de la partición 5, las particiones son lógicas.
