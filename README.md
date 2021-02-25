@@ -92,21 +92,20 @@
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/3f.png "3f")
 
 ## Mostrar la tabla de particiones del disco donde está instalado el sistema operativo en terminal
-* Abrir la línea de comandos. Lo primero que tenemos que hacer es tener privilegios de super usuario, los cuales se explican a continuación:
-1. Escribir el comando sudo su
-2. Una vez colocado, nos va a solicitar una contraseña, la cual es la que se utiliza para acceder al equipo. Es importante mencionar que al momento de escribir no se desplegara lo ingresado
-3. Si se realizaron los pasos de manera correcta, se mostrará lo siguiente:
-* Una vez que tenemos los permisos de super usuario, escribimos el comando `fdisk -l`, lo cual nos mostrará la siguiente información:
+* Primero, se deben tener privilegios de súper usuario:
+1. `sudo su`
+2. Ingresar la contraseña, la cual es la que se utiliza para acceder al equipo.
+3. Ingresar el comando `fdisk -l`, el cual mostrará la siguiente información:
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/4a.png "4a")
 
-1. Lo que se acaba de hacer con este comando, es acceder a los enlistados de los  discos duros, la que nosotros tenemos que buscar es la siguiente:
+* Lo que se acaba de hacer con este comando, es acceder a los enlistados de los discos duros, la que se busca en este caso es la siguiente:
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/4b.png "4b")
 
-3. Lo primero que se muestra en la imagen es el disco en donde esta instalado el sistema operativo, si observamos en la parte de abajo, podemos observar que hay una tabla, esa tabla es la tabla de particiones del sistema operativo.
-4. En caso de que no hubiera tabla, quiere decir que no hay particiones en ese disco.
-5. Para poder salir, solo se coloca el comando exit para salir del modo super usuario, para terminar en la línea de comandos cierra la ventana con el tache que esta en la parte superior derecha de la pantalla.
+* Lo primero que se muestra en la imagen es el disco en donde está instalado el sistema operativo, si se observa en la parte de abajo, hay una tabla, esa es la tabla de particiones del sistema operativo.
+* En caso de que no hubiese tabla, quiere decir que no hay particiones en ese disco.
+* Para poder salir, solo se coloca el comando exit para salir del modo super usuario.
 ## Conectar una memoria USB y mostrar su tabla de particiones en terminal
 ###### Para mostrar las tablas de particiones, se utiliza el siguiente comando:
 * `sudo fdisk -l`
