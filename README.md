@@ -48,6 +48,34 @@
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/2a.png "2a")
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/2b.png "2b")
 ## Enlistar la información de los dispositivos de bloque conectados aunque no estén montados en terminal
+* Abrir la línea de comandos.
+*	Dentro de la línea de comandos, colocar el comando lsblk.
+*	El comando anterior, proviene de la abreviatura (List Block Devices).
+*	Este comando obtiene un enlistado de todos los dispositivos de bloque que estén o no estén montados.
+*	Al colocar el comando y presionar la tecla «intro», despliega la siguiente información:
+* xDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDddddd
+* En la primera columna del enlistado, se tiene un campo llamado «Name», la cual nos menciona el nombre del dispositivo o de la partición.
+*	En la segunda columna de la tabla, se pude apreciar que hay un campo llamado «Maj:Min» los cuales se explican a continuación:
+**	El término «Maj» hace referencia al término «major».
+**	El término "Min" hace referencia al término «minor».
+**	Estos términos mencionados anteriormente, es la forma la cual el Kernel mediante números enteros se refiere a los dispositivos de manera interna.
+** -lsblk -b: nos despliega el tamaño de cada dispositivo en bytes, como se puede ver en la imagen a comparación de la imagen anterior, podemos ver que en el campo “size” ya no existe la presencia de letras M, ya que nos los despliega en bytes.
+** lsblk -d: Imprime los dispositivos de bloque titulares y no las particiones, como podemos observar en la imagen, no se muestran las particiones de sda.
+** lsblk -m: Muestra la tabla, donde se observan los diversos permisos que tiene los dispositivos de bloque en el enlistado.
+* Abajo de los del campo anteriormente mencionado, se tiene un formato de números de la siguiente manera: 7:1. La cuál se explica a continuación:
+** o	- El primer número del formato, hace alusión al tipo de dispositivo que es, si se tiene un disco SCSI se le asigna el número 8, en 	caso de que sean discos IDE se les asigna el número 3, para los discos ópticos se les asigna el número 11 para los disquetes es el número 2, /dev, /null y /zero se les asocia el número 1, consolas virtuales y terminales se les asocia el número 4 y los dispositivos vcs1 y vcsa1 se les asocia el número 7.
+** El segundo número, especifica al dispositivo que hay dentro del primer número.
+*	En el tercer campo de la tabla que tiene como nombre "RM" hace alusión a si es extraíble, en caso de que sea extraíble, se despliega un 1 en caso contrario se despliega un 0.
+*	En el quinto campo de la tabla hace referencia a si es solo lectura, en caso de que sea solo lectura, se despliega un 1 en caso contrario se despliega un 0.
+*	En el sexto campo de la tabla, se refiere a qué tipo de dispositivo es. dentro de estos puede haber muchos, como, por ejemplo:
+** disk: unidad de almacenamiento.
+** part: partición del disco.
+** loop: un pseudodispositivo el cual permite que un dispositivo sea accesible como un dispositivo de bloque.
+* En el último campo de la tabla, hace referencia al punto de montaje de cada partición o del dispositivo de bloques.
+* Dentro de este comando, hay ciertas variaciones, las cuales se explican a continuación.
+** lsblk -a: Nos despliega los dispositivos vacíos, como se puede observar en la imagen, podemos ver que en la parte de NAME, hay un campo llamado «loop 7» el cual no aparece en la imagen anterior.
+** lsblk -o: Muestra de manera personalizada, la tabla de los dispositivos de bloque, en este ejemplo, vamos a desplegar el nombre y el tamaño, como se puede ver en el ejemplo a continuación, se tiene que escribir el comando que está escrito al principio de la viñeta, después se deja un espacio y se escriben los nombre de las columnas que quieres que aparezcan; si es más de un elemento, va separado por coma.
+
 ## Mostrar la tabla de particiones del disco donde está instalado el sistema operativo en terminal
 ## Conectar una memoria USB y mostrar su tabla de particiones en terminal
 ###### Para mostrar las tablas de particiones, se utiliza el siguiente comando:
