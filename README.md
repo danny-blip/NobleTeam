@@ -38,6 +38,14 @@
 
 
 ## ¿Cómo montar y desmontar una USB en el sistema por terminal?
+######Primero, se debe saber qué dispositivos están montados, para eso, se utiliza el siguiente comando:
+* df -h
+######Para desmontar una USB en terminal se utiliza el siguiente comando:
+* umount /dev/sdb1
+######Para montar una USB en terminal se utilizan los siguientes comandos (en este caso, se montará en una carpeta en el escritorio llamada USB):
+* cd Escritorio/
+* mkdir USB
+* sudo mount /dev/sdb1 USB
 ## Enlistar la información de los dispositivos de bloque conectados aunque no estén montados en terminal
 ## Mostrar la tabla de particiones del disco donde está instalado el sistema operativo en terminal
 ## Conectar una memoria USB y mostrar su tabla de particiones en terminal
