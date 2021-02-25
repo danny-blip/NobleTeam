@@ -115,6 +115,7 @@
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/5b.png "5b")
 
 ## Borrar todas las particiones de la USB en terminal
+* Para llevar a cabo este paso, es necesario que la USB esté desmontada.
 * Ejecutar `sudo fdisk /dev/sdb`.
 * Ejecutar `d` (delete) para borrar una partición.
 * Introducir el número de partición a borrar. Si solo se tiene una, se seleccionará y se borrará de manera automática.
@@ -126,6 +127,7 @@
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/6a.png "6a")
 
 ## Crear tres particiones físicas y una extendida en la USB
+* Para llevar a cabo este paso, es necesario que la USB esté desmontada.
 * Ejecutar `sudo fdisk /dev/sdb`.
 * Ejecutar `n` (new) para crear una nueva partición.
 * Introducir el tipo de partición («p» para primaria y «e» para extendida).
@@ -142,6 +144,7 @@
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/7b.png "7b")
 
 ## Crear una partición lógica dentro de la partición extendida de la USB en terminal
+* Para llevar a cabo este paso, es necesario que la USB esté desmontada.
 * Se necesitan 3 particiones físicas y una partición extendida.
 * Ejecutar `sudo fdisk /dev/sdb`.
 * Ejecutar `n` (new) para crear una nueva partición.
@@ -152,6 +155,7 @@
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/8a.png "8a")
 
 ## En la interfaz gráfica de la aplicación «Discos», borrar las particiones para que solo exista una partición que abarque toda la USB
+* Para llevar a cabo este paso, es necesario que la USB esté desmontada.
 * Abrir la aplicación Discos en Ubuntu.
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9a.png "9a")
@@ -179,10 +183,11 @@
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9g.png "9g")
 
 ## Copiar un archivo .iso de distribución live de linux a la USB por medio del comando "dd"
+* Para llevar a cabo este paso, es necesario que la USB esté desmontada.
 * Descargar un archivo iso de la distribución Linux deseada. Para este caso, se utilizará Kali Linux. Una vez que el archivo esté descargado, se abre la terminal, se cambia al directorio en donde se guardó el archivo `.iso` y se ejecuta el siguiente comando:
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/10a.png "10a")
 
-* Se tardará unos minutos dependiendo de la capacidad de la USB. Finalmente, en la USB se tendrá lo siguiente:
+* Se tardará unos minutos dependiendo de la capacidad de la USB. Finalmente, se debe montar la USB y, en ella, se tendrá lo siguiente:
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/10B.png "10b")
