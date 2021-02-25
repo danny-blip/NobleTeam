@@ -39,7 +39,7 @@
 ###### Primero, se debe saber qué dispositivos están montados, para eso, se utiliza el siguiente comando:
 * `df -h`
 ###### Para desmontar una USB en terminal se utiliza el siguiente comando:
-* `umount /dev/sdb1`
+* `sudo umount /dev/sdb1`
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/2c.png "2c")
 
