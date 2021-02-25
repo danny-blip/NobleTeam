@@ -42,6 +42,7 @@
 * umount /dev/sdb1
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/2c.png "2c")
+
 ###### Para montar una USB en terminal se utilizan los siguientes comandos (en este caso, se montará en una carpeta en el escritorio llamada USB):
 * cd Escritorio/
 * mkdir USB
@@ -49,6 +50,7 @@
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/2a.png "2a")
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/2b.png "2b")
+
 ## Enlistar la información de los dispositivos de bloque conectados aunque no estén montados en terminal
 * Abrir la línea de comandos.
 *	Dentro de la línea de comandos, colocar el comando lsblk.
@@ -57,6 +59,7 @@
 *	Al colocar el comando y presionar la tecla «intro», despliega la siguiente información:
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/3a.png "3a")
+
 * En la primera columna del enlistado, se tiene un campo llamado «Name», la cual nos menciona el nombre del dispositivo o de la partición.
 *	En la segunda columna de la tabla, se pude apreciar que hay un campo llamado «Maj:Min» los cuales se explican a continuación:
 1. El término «Maj» hace referencia al término «major».
@@ -65,12 +68,15 @@
 4. -lsblk -b: nos despliega el tamaño de cada dispositivo en bytes, como se puede ver en la imagen a comparación de la imagen anterior, podemos ver que en el campo “size” ya no existe la presencia de letras M, ya que nos los despliega en bytes.
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/3b.png "3b")
+
 5. lsblk -d: Imprime los dispositivos de bloque titulares y no las particiones, como podemos observar en la imagen, no se muestran las particiones de sda.
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/3c.png "3c")
+
 7. lsblk -m: Muestra la tabla, donde se observan los diversos permisos que tiene los dispositivos de bloque en el enlistado.
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/3d.png "3d")
+
 * Abajo de los del campo anteriormente mencionado, se tiene un formato de números de la siguiente manera: 7:1. La cuál se explica a continuación:
 9. o	- El primer número del formato, hace alusión al tipo de dispositivo que es, si se tiene un disco SCSI se le asigna el número 8, en 	caso de que sean discos IDE se les asigna el número 3, para los discos ópticos se les asigna el número 11 para los disquetes es el número 2, /dev, /null y /zero se les asocia el número 1, consolas virtuales y terminales se les asocia el número 4 y los dispositivos vcs1 y vcsa1 se les asocia el número 7.
 10. El segundo número, especifica al dispositivo que hay dentro del primer número.
@@ -85,6 +91,7 @@
 14. lsblk -a: Nos despliega los dispositivos vacíos, como se puede observar en la imagen, podemos ver que en la parte de NAME, hay un campo llamado «loop 7» el cual no aparece en la imagen anterior.
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/3e.png "3e")
+
 16. lsblk -o: Muestra de manera personalizada, la tabla de los dispositivos de bloque, en este ejemplo, vamos a desplegar el nombre y el tamaño, como se puede ver en el ejemplo a continuación, se tiene que escribir el comando que está escrito al principio de la viñeta, después se deja un espacio y se escriben los nombre de las columnas que quieres que aparezcan; si es más de un elemento, va separado por coma.
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/3f.png "3f")
@@ -97,9 +104,11 @@
 * Una vez que tenemos los permisos de super usuario, escribimos el comando fdisk -l, lo cual nos mostrará la siguiente información:
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/4a.png "4a")
+
 1. Lo que se acaba de hacer con este comando, es acceder a los enlistados de los  discos duros, la que nosotros tenemos que buscar es la siguiente:
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/4b.png "4b")
+
 3. Lo primero que se muestra en la imagen es el disco en donde esta instalado el sistema operativo, si observamos en la parte de abajo, podemos observar que hay una tabla, esa tabla es la tabla de particiones del sistema operativo.
 4. En caso de que no hubiera tabla, quiere decir que no hay particiones en ese disco.
 5. Para poder salir, solo se coloca el comando exit para salir del modo super usuario, para terminar en la línea de comandos cierra la ventana con el tache que esta en la parte superior derecha de la pantalla.
@@ -108,7 +117,9 @@
 * sudo fdisk -l
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/5a.png "5a")
+
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/5b.png "5b")
+
 ## Borrar todas las particiones de la USB en terminal
 * sudo fdisk /dev/sdb
 * d
@@ -119,6 +130,7 @@
 * q
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/6a.png "6a")
+
 ## Crear tres particiones físicas y una extendida en la USB
 * sudo fdisk /dev/sdb
 * n
@@ -130,7 +142,9 @@
 * Repetir para el número de particiones deseadas
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/7a.png "7a")
+
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/7b.png "7b")
+
 ## Crear una partición lógica dentro de la partición extendida de la USB en terminal
 * Se necesitan 3 particiones físicas y una partición extendida
 * sudo fdisk /dev/sdb
@@ -140,31 +154,39 @@
 * Introducir el tamaño de la partición, por ejemplo, "+512M" (debe ser menor al tamaño de la partición que la contiene)
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/8a.png "8a")
+
 ## En la interfaz gráfica de la aplicación "Discos", borrar las particiones para que solo exista una partición que abarque toda la USB
 ###### Abrir la aplicación Discos en Ubuntu
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9a.png "9a")
+
 ###### Seleccionar la partición a borrar
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9b.png "9b")
+
 ###### Eliminar la partición
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9c.png "9c")
+
 ###### Repetir con todas las demás particiones, excepto la uno. Una vez que se tenga solo la primera partición, se selecciona y se da clic en el engranaje.
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9d.png "9d")
+
 ###### Seleccionar la barrita de tamaño actual y arrastratla toda a la derecha para utilizar todo el almacenamiento para esa partición.
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9e.png "9e")
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9f.png "9f")
+
 ###### ¡Y listo!
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9g.png "9g")
+
 ## Copiar un archivo .iso de distribución live de linux a la USB por medio del comando "dd"
 ###### Descargar un archivo iso de la distribución Linux deseada. Para este caso, se utilizará Kali Linux. Una vez que el archivo esté descargado, se abre la terminal y se ejecutan los siguientes comandos.
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/10a.png "10a")
+
 ###### Se tardará unos minutos dependiendo de la capacidad de la USB.
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/10b.png "10b")
