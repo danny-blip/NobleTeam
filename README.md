@@ -83,4 +83,17 @@
 * Introducir el tamaño de la partición, por ejemplo, "+512M" (debe ser menor al tamaño de la partición que la contiene)
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/8a.png "8a")
 ## En la interfaz gráfica de la aplicación "Discos", borrar las particiones para que solo exista una partición que abarque toda la USB
+###### Abrir la aplicación Discos en Ubuntu
+![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9a.png "9a")
+###### Seleccionar la partición a borrar
+![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9b.png "9b")
+###### Eliminar la partición
+![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9b.png "9d")
+###### Repetir con todas las demás particiones, excepto la uno. Una vez que se tenga solo la primera partición, se selecciona y se da clic en el engranaje.
+![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9f.png "9f")
+###### Seleccionar la barrita de tamaño actual y arrastratla toda a la derecha para utilizar todo el almacenamiento para esa partición.
+![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9g.png "9g")
+![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9h.png "9h")
+###### ¡Y listo!
+![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9i.png "9i")
 ## Copiar un archivo .iso de distribución live de linux a la USB por medio del comando "dd"
