@@ -115,37 +115,39 @@
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/5b.png "5b")
 
 ## Borrar todas las particiones de la USB en terminal
-* `sudo fdisk /dev/sdb`
-* `d`
-* Introducir el número de partición a borrar. Si solo se tiene una, se seleccionará de manera automática
+* Ejecutar `sudo fdisk /dev/sdb`.
+* Ejecutar `d` (delete) para borrar una partición.
+* Introducir el número de partición a borrar. Si solo se tiene una, se seleccionará y se borrará de manera automática.
 * Reperir para las particiones que se deseen borrar.
-* `p`
-* `w`
-* `q`
+* Ejecutar `p` para ver los cambios realizados.
+* Ejecutar `w` para guardar los cambios y salir.
+* Ejecutar `q` para salir sin guardar los cambios.
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/6a.png "6a")
 
 ## Crear tres particiones físicas y una extendida en la USB
-* `sudo fdisk /dev/sdb`
-* `n`
-* `p`
-* Introducir el número de partición (se recomienda el valor por defecto)
-* Introducir el punto de partida (se recomienda el valor por defecto)
-* Introducir el tamaño de la partición, por ejemplo, "+1024M" para 1 GB
-* Introducir `p` para ver la tabla de particiones
-* Repetir para el número de particiones deseadas
+* Ejecutar `sudo fdisk /dev/sdb`.
+* Ejecutar `n` (new) para crear una nueva partición.
+* Introducir el tipo de partición («p» para primaria y «e» para extendida).
+* Introducir el número de partición (se recomienda el valor por defecto).
+* Introducir el punto de partida (se recomienda el valor por defecto).
+* Introducir el tamaño de la partición, por ejemplo, "+1024M" para 1 GB.
+* Repetir para las otras dos particiones físicas y una vez más para la extendida (para esta, se introduce «e» en el tipo de partición).
+* Ejecutar `p` para ver los cambios realizados.
+* Ejecutar `w` para guardar los cambios y salir.
+* Ejecutar `q` para salir sin guardar los cambios.
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/7a.png "7a")
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/7b.png "7b")
 
 ## Crear una partición lógica dentro de la partición extendida de la USB en terminal
-* Se necesitan 3 particiones físicas y una partición extendida
-* `sudo fdisk /dev/sdb`
-* `n`
-* Automáticamente se creará una partición lógica dentro de la extendida seleccionada
+* Se necesitan 3 particiones físicas y una partición extendida.
+* Ejecutar `sudo fdisk /dev/sdb`.
+* Ejecutar `n` (new) para crear una nueva partición.
+* Automáticamente se creará una partición lógica dentro de la extendida seleccionada.
 * Introducir el punto de partida (se recomienda el valor por defecto)
-* Introducir el tamaño de la partición, por ejemplo, "+512M" (debe ser menor al tamaño de la partición que la contiene)
+* Introducir el tamaño de la partición, por ejemplo, "+512M" (debe ser menor al tamaño de la partición que la contiene).
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/8a.png "8a")
 
