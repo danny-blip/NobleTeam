@@ -58,36 +58,36 @@
 * En la primera columna del enlistado, se tiene un campo llamado «Name», el cual indica el nombre del dispositivo o de la partición.
 *	En la segunda columna de la tabla, se tiene un campo llamado «Maj:Min», que se explica a continuación:
 1. El término «Maj» hace referencia al término «major».
-2. El término "Min" hace referencia al término «minor».
-3. Estos términos mencionados anteriormente, es la forma la cual el Kernel mediante números enteros se refiere a los dispositivos de manera interna.
-4. `lsblk -b`: despliega el tamaño de cada dispositivo en bytes, como se puede ver en la imagen a comparación de la imagen anterior, podemos ver que en el campo “size” ya no existe la presencia de letras M, ya que nos los despliega en bytes.
+2. El término «Min» hace referencia al término «minor».
+3. Estos términos mencionados anteriormente, es la forma en la cual el Kernel, mediante números enteros, se refiere a los dispositivos de manera interna.
+* `lsblk -b` despliega el tamaño de cada dispositivo en bytes, como se puede ver en la imagen, a comparación de la imagen anterior, en el campo «»size» ya no existe la presencia de letras M, ya que los despliega en bytes.
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/3b.png "3b")
 
-5. `lsblk -d`: Imprime los dispositivos de bloque titulares y no las particiones, como podemos observar en la imagen, no se muestran las particiones de sda.
+* `lsblk -d` Imprime los dispositivos de bloque titulares y no las particiones, como puede observarse en la imagen, no se muestran las particiones de `sda`.
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/3c.png "3c")
 
-7. `lsblk -m`: Muestra la tabla, donde se observan los diversos permisos que tiene los dispositivos de bloque en el enlistado.
+* `lsblk -m` muestra la tabla en donde se observan los diversos permisos que tiene los dispositivos de bloque en el enlistado.
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/3d.png "3d")
 
-* Abajo de los del campo anteriormente mencionado, se tiene un formato de números de la siguiente manera: 7:1. La cuál se explica a continuación:
-9. El primer número del formato, hace alusión al tipo de dispositivo que es, si se tiene un disco SCSI se le asigna el número 8, en 	caso de que sean discos IDE se les asigna el número 3, para los discos ópticos se les asigna el número 11 para los disquetes es el número 2, `/dev`, `/null` y `/zero` se les asocia el número 1, consolas virtuales y terminales se les asocia el número 4 y los dispositivos vcs1 y vcsa1 se les asocia el número 7.
-10. El segundo número, especifica al dispositivo que hay dentro del primer número.
-*	En el tercer campo de la tabla que tiene como nombre "RM" hace alusión a si es extraíble, en caso de que sea extraíble, se despliega un 1 en caso contrario se despliega un 0.
-*	En el quinto campo de la tabla hace referencia a si es solo lectura, en caso de que sea solo lectura, se despliega un 1 en caso contrario se despliega un 0.
-*	En el sexto campo de la tabla, se refiere a qué tipo de dispositivo es. dentro de estos puede haber muchos, como, por ejemplo:
-11. disk: unidad de almacenamiento.
-12. part: partición del disco.
-13. loop: un pseudodispositivo el cual permite que un dispositivo sea accesible como un dispositivo de bloque.
-* En el último campo de la tabla, hace referencia al punto de montaje de cada partición o del dispositivo de bloques.
-* Dentro de este comando, hay ciertas variaciones, las cuales se explican a continuación.
-14. lsblk -a: Nos despliega los dispositivos vacíos, como se puede observar en la imagen, podemos ver que en la parte de NAME, hay un campo llamado «loop 7» el cual no aparece en la imagen anterior.
+* Abajo de los del campo anteriormente mencionado, se tiene un formato de números de la siguiente manera: 7:1. La cual se explica a continuación:
+1. El primer número del formato hace alusión al tipo de dispositivo que es, si se tiene un disco SCSI, se le asigna el número 8 y, en caso de que sean discos IDE, se les asigna el número 3; a los discos ópticos se les asigna el número 11, para los disquetes es el número 2, `/dev`, `/null` y `/zero` se les asocia el número 1, a consolas virtuales y terminales se les asocia el número 4 y, a los dispositivos `vcs1` y `vcsa1`, se les asocia el número 7.
+2. El segundo número especifica al dispositivo qué hay dentro del primer número.
+*	En el tercer campo de la tabla que tiene como nombre «RM» hace alusión a si es extraíble. En caso de que sea extraíble, se despliega un 1, en caso contrario, se despliega un 0.
+*	En el quinto campo de la tabla se hace referencia a si es solo lectura, en caso de que sea solo lectura, se despliega un 1, en caso contrario, se despliega un 0.
+*	En el sexto campo de la tabla se hace referencia a qué tipo de dispositivo es. Dentro de estos puede haber muchos, como por ejemplo:
+1. disk: unidad de almacenamiento.
+2. part: partición del disco.
+3. loop: un pseudodispositivo que permite que un dispositivo sea accesible como un dispositivo de bloque.
+* En el último campo de la tabla se hace referencia al punto de montaje de cada partición o del dispositivo de bloques.
+* Dentro de este comando, hay ciertas variaciones, las cuales se explican a continuación:
+14. `lsblk -a` despliega los dispositivos vacíos, como se puede observar en la imagen, se puede ver que, en la parte de «NAME», hay un campo llamado «loop 7», el cual no aparece en la imagen anterior.
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/3e.png "3e")
 
-16. `lsblk -o`: Muestra de manera personalizada, la tabla de los dispositivos de bloque, en este ejemplo, vamos a desplegar el nombre y el tamaño, como se puede ver en el ejemplo a continuación, se tiene que escribir el comando que está escrito al principio de la viñeta, después se deja un espacio y se escriben los nombre de las columnas que quieres que aparezcan; si es más de un elemento, va separado por coma.
+16. `lsblk -o` muestra la tabla de los dispositivos de bloque de manera personalizada. En este ejemplo, se desplegará el nombre y el tamaño. Como puede verse en el ejemplo a continuación, se tiene que escribir el comando que está escrito al principio de la viñeta. Después, se deja un espacio y se escriben los nombre de las columnas que se desean que aparezcan; si es más de un elemento, van separados por comas.
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/3f.png "3f")
 
