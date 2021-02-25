@@ -1,5 +1,5 @@
 # Manejo de discos
-## Identificar y describir las diferencias entre hda, sda y vda. Además, explicar qué significa la letra y el número al final de los identificadores
+## ¿Cuáles son las diferencias entre hda, sda y vda? ¿Qué significa la letra y el número al final de los identificadores?
 ###### Los nombres de los discos y particiones de los diferentes sistemas operativos se les otorgan diferentes nombres, por ejemplo:
 ###### Para MS-DOS y Windows, los dispositivos suelen llamarse por letras (A, B, C, D...):
 * Unidad A: primera unidad de disquetes
@@ -50,7 +50,7 @@
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/2b.png "2b")
 
-## Enlistar la información de los dispositivos de bloque conectados aunque no estén montados en terminal
+## ¿Cómo enlistar la información de los dispositivos de bloque conectados aunque no estén montados en terminal?
 *	Ejecutar el comando `lsblk` (este comando proviene de la abreviatura «List Block Devices»).
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/3a.png "3a")
@@ -91,7 +91,7 @@
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/3f.png "3f")
 
-## Mostrar la tabla de particiones del disco donde está instalado el sistema operativo en terminal
+## ¿Cómo mostrar la tabla de particiones del disco donde está instalado el sistema operativo en terminal?
 * Primero, se deben tener privilegios de súper usuario:
 1. `sudo su`
 2. Ingresar la contraseña, la cual es la que se utiliza para acceder al equipo.
@@ -106,7 +106,7 @@
 * Lo primero que se muestra en la imagen es el disco en donde está instalado el sistema operativo, si se observa en la parte de abajo, hay una tabla, esa es la tabla de particiones del sistema operativo.
 * En caso de que no hubiese tabla, quiere decir que no hay particiones en ese disco.
 * Para poder salir, solo se coloca el comando exit para salir del modo super usuario.
-## Conectar una memoria USB y mostrar su tabla de particiones en terminal
+## ¿Cómo conectar una memoria USB y mostrar su tabla de particiones en terminal?
 ###### Para mostrar las tablas de particiones, se utiliza el siguiente comando:
 * `sudo fdisk -l`
 
@@ -114,7 +114,7 @@
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/5b.png "5b")
 
-## Borrar todas las particiones de la USB en terminal
+## ¿Cómo borrar todas las particiones de la USB en terminal?
 * Para llevar a cabo este paso, es necesario que la USB esté desmontada.
 * Ejecutar `sudo fdisk /dev/sdb`.
 * Ejecutar `d` (delete) para borrar una partición.
@@ -126,7 +126,7 @@
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/6a.png "6a")
 
-## Crear tres particiones físicas y una extendida en la USB
+## ¿Cómo crear tres particiones físicas y una extendida en la USB?
 * Para llevar a cabo este paso, es necesario que la USB esté desmontada.
 * Ejecutar `sudo fdisk /dev/sdb`.
 * Ejecutar `n` (new) para crear una nueva partición.
@@ -143,7 +143,7 @@
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/7b.png "7b")
 
-## Crear una partición lógica dentro de la partición extendida de la USB en terminal
+## ¿Cómo crear una partición lógica dentro de la partición extendida de la USB en terminal?
 * Para llevar a cabo este paso, es necesario que la USB esté desmontada.
 * Se necesitan 3 particiones físicas y una partición extendida.
 * Ejecutar `sudo fdisk /dev/sdb`.
@@ -154,7 +154,7 @@
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/8a.png "8a")
 
-## En la interfaz gráfica de la aplicación «Discos», borrar las particiones para que solo exista una partición que abarque toda la USB
+## En la interfaz gráfica de la aplicación «Discos», ¿cómo borrar las particiones para que solo exista una partición que abarque toda la USB?
 * Para llevar a cabo este paso, es necesario que la USB esté desmontada.
 * Abrir la aplicación Discos en Ubuntu.
 
@@ -182,7 +182,7 @@
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9g.png "9g")
 
-## Copiar un archivo .iso de distribución live de linux a la USB por medio del comando «dd»
+## ¿Cómo copiar un archivo .iso de distribución live de linux a la USB por medio del comando «dd» en terminal?
 * Para llevar a cabo este paso, es necesario que la USB esté desmontada.
 * Descargar un archivo iso de la distribución Linux deseada. Para este caso, se utilizará Kali Linux. Una vez que el archivo esté descargado, se abre la terminal, se cambia al directorio en donde se guardó el archivo `.iso` y se ejecuta el siguiente comando:
 
