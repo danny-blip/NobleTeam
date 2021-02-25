@@ -35,10 +35,8 @@
 *	240 = /dev/vdp -> decimosexta partición en la primera unidad de disco Xen VBD del sistema.
 ###### La enumeración, es decir, las particiones de vda, se manejan de la misma manera que los discos IDE, las particiones pueden llegar hasta 15 bits.
 ###### La diferencia entre hda, sda y vda es que hda es la partición de disco maestro IDE, mientras que sda son las particiones de disco externo detectado emulado sin que el s.o. invitado sepa que se está ejecutando, mientras que el vda el s.o. invitado está consciente de que se ejecuta y de que es un disco virtual en la nube que emula lo que hace un sda, pero sin la necesidad de hardware.
-
-
 ## ¿Cómo montar y desmontar una USB en el sistema por terminal?
-######Primero, se debe saber qué dispositivos están montados, para eso, se utiliza el siguiente comando:
+###### Primero, se debe saber qué dispositivos están montados, para eso, se utiliza el siguiente comando:
 * df -h
 ###### Para desmontar una USB en terminal se utiliza el siguiente comando:
 * umount /dev/sdb1
@@ -49,8 +47,32 @@
 ## Enlistar la información de los dispositivos de bloque conectados aunque no estén montados en terminal
 ## Mostrar la tabla de particiones del disco donde está instalado el sistema operativo en terminal
 ## Conectar una memoria USB y mostrar su tabla de particiones en terminal
+###### Para mostrar las tablas de particiones, se utiliza el siguiente comando:
+* sudo fdisk -l
 ## Borrar todas las particiones de la USB en terminal
+* sudo fdisk /dev/sdb
+* d
+* Introducir el número de partición a borrar. Si solo se tiene una, se seleccionará de manera automática
+* Reperir para las particiones que se deseen borrar.
+* p
+* w
+* q
 ## Crear tres particiones físicas y una extendida en la USB
+* sudo fdisk /dev/sdb
+* n
+* p
+* Introducir el número de partición (se recomienda el valor por defecto)
+* Introducir el punto de partida (se recomienda el valor por defecto)
+* Introducir el tamaño de la partición, por ejemplo, "+1024M" para 1 GB
+* Introducir "p" para ver la tabla de particiones
+* Repetir para el número de particiones deseadas
 ## Crear una partición lógica dentro de la partición extendida de la USB en terminal
+* Se necesitan 3 particiones físicas y una partición extendida
+* sudo fdisk /dev/sdb
+* n
+* Automáticamente se creará una partición lógica dentro de la extendida seleccionada
+* Introducir el punto de partida (se recomienda el valor por defecto)
+* Introducir el tamaño de la partición, por ejemplo, "+512M" (debe ser menor al tamaño de la partición
+	que la contiene)
 ## En la interfaz gráfica de la aplicación "Discos", borrar las particiones para que solo exista una partición que abarque toda la USB
 ## Copiar un archivo .iso de distribución live de linux a la USB por medio del comando "dd"
