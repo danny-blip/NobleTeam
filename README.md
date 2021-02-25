@@ -133,7 +133,7 @@
 * Introducir el tipo de partición («p» para primaria y «e» para extendida).
 * Introducir el número de partición (se recomienda el valor por defecto).
 * Introducir el punto de partida (se recomienda el valor por defecto).
-* Introducir el tamaño de la partición, por ejemplo, "+1024M" para 1 GB.
+* Introducir el tamaño de la partición, por ejemplo, «+1024M» para 1 GB.
 * Repetir para las otras dos particiones físicas y una vez más para la extendida (para esta, se introduce «e» en el tipo de partición).
 * Ejecutar `p` para ver los cambios realizados.
 * Ejecutar `w` para guardar los cambios y salir.
@@ -150,7 +150,7 @@
 * Ejecutar `n` (new) para crear una nueva partición.
 * Automáticamente se creará una partición lógica dentro de la extendida seleccionada.
 * Introducir el punto de partida (se recomienda el valor por defecto)
-* Introducir el tamaño de la partición, por ejemplo, "+512M" (debe ser menor al tamaño de la partición que la contiene).
+* Introducir el tamaño de la partición, por ejemplo, «+512M» (debe ser menor al tamaño de la partición que la contiene).
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/8a.png "8a")
 
@@ -182,7 +182,7 @@
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9g.png "9g")
 
-## Copiar un archivo .iso de distribución live de linux a la USB por medio del comando "dd"
+## Copiar un archivo .iso de distribución live de linux a la USB por medio del comando «dd»
 * Para llevar a cabo este paso, es necesario que la USB esté desmontada.
 * Descargar un archivo iso de la distribución Linux deseada. Para este caso, se utilizará Kali Linux. Una vez que el archivo esté descargado, se abre la terminal, se cambia al directorio en donde se guardó el archivo `.iso` y se ejecuta el siguiente comando:
 
