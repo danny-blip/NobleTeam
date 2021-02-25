@@ -97,3 +97,6 @@
 ###### ¡Y listo!
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9i.png "9i")
 ## Copiar un archivo .iso de distribución live de linux a la USB por medio del comando "dd"
+###### Descargar un archivo iso de la distribución Linux deseada. Para este caso, se utilizará Kali Linux. Una vez que el archivo esté descargado, se abre la terminal y se ejecutan los siguientes comandos.
+![alt text](https://github.com/danny-blip/NobleTeam/blob/main/10a.png "10a")
+###### Se tardará unos minutos dependiendo de la capacidad de la USB.
