@@ -89,6 +89,7 @@
 ## Conectar una memoria USB y mostrar su tabla de particiones en terminal
 ###### Para mostrar las tablas de particiones, se utiliza el siguiente comando:
 * sudo fdisk -l
+
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/5a.png "5a")
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/5b.png "5b")
 ## Borrar todas las particiones de la USB en terminal
