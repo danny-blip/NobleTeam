@@ -6,6 +6,7 @@
 * Unidad B: segunda unidad de disquetes
 * Unidad C: primera unidad de disco duro
 * Unidad D: primera unidad de CD/DVD
+![alt text](https://github.com/danny-blip/NobleTeam/blob/main/prueba.jpg "Logo Title Text 1")
 ###### En Linux se otorgan diferentes nombres en los discos, y las particiones llegan a ser diferentes a las de otros sistemas operativos. A cada dispositivo se le otorga su posición y partucuones. Linux necesita conocer el nombre de los dispositivos para crear y montal sus particiones en disco.
 ###### En Linux el nombre de cualquier dispositivo empieza por /dev/ (device).
 * Para el disco maestro en el controlador IDE primario se le llama /dev/hda
