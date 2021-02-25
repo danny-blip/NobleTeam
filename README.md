@@ -185,4 +185,4 @@
 
 * Se tardará unos minutos dependiendo de la capacidad de la USB. Finalmente, en la USB se tendrá lo siguiente:
 
-![alt text](https://github.com/danny-blip/NobleTeam/blob/main/10b.png "10b")
+![alt text](https://github.com/danny-blip/NobleTeam/blob/main/10B.png "10b")
