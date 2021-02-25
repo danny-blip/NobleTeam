@@ -125,14 +125,14 @@
 ###### Seleccionar la partición a borrar
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9b.png "9b")
 ###### Eliminar la partición
-![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9b.png "9d")
+![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9c.png "9c")
 ###### Repetir con todas las demás particiones, excepto la uno. Una vez que se tenga solo la primera partición, se selecciona y se da clic en el engranaje.
-![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9f.png "9f")
+![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9d.png "9d")
 ###### Seleccionar la barrita de tamaño actual y arrastratla toda a la derecha para utilizar todo el almacenamiento para esa partición.
-![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9g.png "9g")
-![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9h.png "9h")
+![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9e.png "9e")
+![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9f.png "9f")
 ###### ¡Y listo!
-![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9i.png "9i")
+![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9g.png "9g")
 ## Copiar un archivo .iso de distribución live de linux a la USB por medio del comando "dd"
 ###### Descargar un archivo iso de la distribución Linux deseada. Para este caso, se utilizará Kali Linux. Una vez que el archivo esté descargado, se abre la terminal y se ejecutan los siguientes comandos.
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/10a.png "10a")
