@@ -7,48 +7,49 @@
 * Unidad C: primera unidad de disco duro
 * Unidad D: primera unidad de CD/DVD
 ###### En Linux se otorgan diferentes nombres en los discos, y las particiones llegan a ser diferentes a las de otros sistemas operativos. A cada dispositivo se le otorga su posición y partucuones. Linux necesita conocer el nombre de los dispositivos para crear y montal sus particiones en disco.
-###### En Linux el nombre de cualquier dispositivo empieza por /dev/ (device).
-* Para el disco maestro en el controlador IDE primario se le llama /dev/hda
-* Para el disco esclavo del controlador IDE primario se le llama /dev/hdb
-* Para el disco maestro y esclavo del controlador IDE secundario se le denomina /dev/hdc y /dev/hdd
+###### En Linux el nombre de cualquier dispositivo empieza por `/dev/` (device).
+* Para el disco maestro en el controlador IDE primario se le llama `/dev/hda`
+* Para el disco esclavo del controlador IDE primario se le llama `/dev/hdb`
+* Para el disco maestro y esclavo del controlador IDE secundario se le denomina `/dev/hdc` y `/dev/hdd`
 ###### Por otro lado, existen varios tipos de particiones:
 * Primarias: como máximo 4.
 * Extendidas: como máximo 1 (en este caso, tres primarias como máximo).
 * Lógicas: casi todas las que se deseen, estas están dentro de una extendida.
 ###### La numeración al final de los identificadores corresponde al tipo de partición, por ejemplo, si se tiene:
-###### /dev/hda4 -> El 4 indica que es la cuarta particion.
+###### `/dev/hda4` -> El 4 indica que es la cuarta particion.
 ###### Se sabe que el máximo de particiones primarias que pueden tenerse son 4. Si se tiene una partición extendida, se le asignaría la partición 4. A partir de la partición 5, las particiones son lógicas.
-###### /dev/hda5 -> Primera partición lógica.
-###### Cuando se habla de /dev/sda, debe entenderse que se refiere al primer disco detectado de tipo IDE, SATA, SCSI emulado y virtualizado por el hipervisor, en donde el sistema operativo invitado no sabe que está ejecutándose sobre un hipervisor, es decir, no sabe que está virtualizado y no requiere de cambios para funcionar en la configuración.
-* La primera unidad de disco SCSI (identificación SCSI address-wise) se llama /dev/sda.
-* La segunda unidad de disco SCSI (address-wise) se llama /dev/sdb, y así sucesivamente.
-###### Las particiones en cada disco se enumeran según el número de particiones por unidad de disco, es decir, si se tiene un sistema de dos discos con dirección SCSI 2 que se llama /dev/sda y SCSI 4 se llama /dev/sdb.
-###### Si existen dos particiones de /dev/sda, se enumeran de la siguiente forma:
-* /dev/sda1 -> 1° partición en la primera unidad de disco SCSI del sistema.
-* /dev/sda2 -> 2° partición en la primera unidad de disco SCSI del sistema.
-###### Lo mismo aplica al disco /dev/sdb y sus particiones.
+###### `/dev/hda5` -> Primera partición lógica.
+###### Cuando se habla de `/dev/sda`, debe entenderse que se refiere al primer disco detectado de tipo IDE, SATA, SCSI emulado y virtualizado por el hipervisor, en donde el sistema operativo invitado no sabe que está ejecutándose sobre un hipervisor, es decir, no sabe que está virtualizado y no requiere de cambios para funcionar en la configuración.
+* La primera unidad de disco SCSI (identificación SCSI address-wise) se llama `/dev/sda`.
+* La segunda unidad de disco SCSI (address-wise) se llama `/dev/sdb`, y así sucesivamente.
+###### Las particiones en cada disco se enumeran según el número de particiones por unidad de disco, es decir, si se tiene un sistema de dos discos con dirección SCSI 2 que se llama `/dev/sda` y SCSI 4 se llama `/dev/sdb`.
+###### Si existen dos particiones de `/dev/sda`, se enumeran de la siguiente forma:
+* `/dev/sda1` -> 1° partición en la primera unidad de disco SCSI del sistema.
+* `/dev/sda2` -> 2° partición en la primera unidad de disco SCSI del sistema.
+###### Lo mismo aplica al disco `/dev/sdb` y sus particiones.
 ###### En la paravirtualización, el sistema operativo invitado es consciente de que está siendo ejecutado en un hipervisor y de que incluye código para que las transiciones de invitado a hipervisor sean eficientes.
-###### Todos los archivos /dev/vda se localizan en el espacio asignado de la máquina virtual.
+###### Todos los archivos `/dev/vda` se localizan en el espacio asignado de la máquina virtual.
 ###### Ejemplo de Xen Virtual Block Device:
-* 0 = /dev/vda -> primera partición en la primera unidad de disco Xen VBD del sistema.
-* 16 = /dev/vdb -> segunda partición en la primera unidad de disco Xen VBD del sistema.
-* 240 = /dev/vdp -> decimosexta partición en la primera unidad de disco Xen VBD del sistema.
+* 0 = `/dev/vda` -> primera partición en la primera unidad de disco Xen VBD del sistema.
+* 16 = `/dev/vdb` -> segunda partición en la primera unidad de disco Xen VBD del sistema.
+* 240 = `/dev/vdp` -> decimosexta partición en la primera unidad de disco Xen VBD del sistema.
 ###### La enumeración, es decir, las particiones de vda, se manejan de la misma manera que los discos IDE, las particiones pueden llegar hasta 15 bits.
-###### La diferencia entre hda, sda y vda es que hda es la partición de disco maestro IDE, mientras que sda son las particiones de disco externo detectado emulado sin que el s.o. invitado sepa que se está ejecutando, mientras que el vda el s.o. invitado está consciente de que se ejecuta y de que es un disco virtual en la nube que emula lo que hace un sda, pero sin la necesidad de hardware.
+###### La diferencia entre `hda`, `sda` y `vda` es que hda es la partición de disco maestro IDE, mientras que sda son las particiones de disco externo detectado emulado sin que el s.o. invitado sepa que se está ejecutando, mientras que el vda el s.o. invitado está consciente de que se ejecuta y de que es un disco virtual en la nube que emula lo que hace un `sda`, pero sin la necesidad de hardware.
 ## ¿Cómo montar y desmontar una USB en el sistema por terminal?
 ###### Primero, se debe saber qué dispositivos están montados, para eso, se utiliza el siguiente comando:
-* df -h
+* `df -h`
 ###### Para desmontar una USB en terminal se utiliza el siguiente comando:
-* umount /dev/sdb1
+* `umount /dev/sdb1`
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/2c.png "2c")
 
 ###### Para montar una USB en terminal se utilizan los siguientes comandos (en este caso, se montará en una carpeta en el escritorio llamada USB):
-* cd Escritorio/
-* mkdir USB
-* sudo mount /dev/sdb1 USB
+* `cd Escritorio/`
+* `mkdir USB`
+* `sudo mount /dev/sdb1 USB`
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/2a.png "2a")
+
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/2b.png "2b")
 
 ## Enlistar la información de los dispositivos de bloque conectados aunque no estén montados en terminal
@@ -63,22 +64,22 @@
 * En la primera columna del enlistado, se tiene un campo llamado «Name», la cual nos menciona el nombre del dispositivo o de la partición.
 *	En la segunda columna de la tabla, se pude apreciar que hay un campo llamado «Maj:Min» los cuales se explican a continuación:
 1. El término «Maj» hace referencia al término «major».
-2.	El término "Min" hace referencia al término «minor».
-3.	Estos términos mencionados anteriormente, es la forma la cual el Kernel mediante números enteros se refiere a los dispositivos de manera interna.
-4. -lsblk -b: nos despliega el tamaño de cada dispositivo en bytes, como se puede ver en la imagen a comparación de la imagen anterior, podemos ver que en el campo “size” ya no existe la presencia de letras M, ya que nos los despliega en bytes.
+2. El término "Min" hace referencia al término «minor».
+3. Estos términos mencionados anteriormente, es la forma la cual el Kernel mediante números enteros se refiere a los dispositivos de manera interna.
+4. `lsblk -b`: despliega el tamaño de cada dispositivo en bytes, como se puede ver en la imagen a comparación de la imagen anterior, podemos ver que en el campo “size” ya no existe la presencia de letras M, ya que nos los despliega en bytes.
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/3b.png "3b")
 
-5. lsblk -d: Imprime los dispositivos de bloque titulares y no las particiones, como podemos observar en la imagen, no se muestran las particiones de sda.
+5. `lsblk -d`: Imprime los dispositivos de bloque titulares y no las particiones, como podemos observar en la imagen, no se muestran las particiones de sda.
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/3c.png "3c")
 
-7. lsblk -m: Muestra la tabla, donde se observan los diversos permisos que tiene los dispositivos de bloque en el enlistado.
+7. `lsblk -m`: Muestra la tabla, donde se observan los diversos permisos que tiene los dispositivos de bloque en el enlistado.
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/3d.png "3d")
 
 * Abajo de los del campo anteriormente mencionado, se tiene un formato de números de la siguiente manera: 7:1. La cuál se explica a continuación:
-9. o	- El primer número del formato, hace alusión al tipo de dispositivo que es, si se tiene un disco SCSI se le asigna el número 8, en 	caso de que sean discos IDE se les asigna el número 3, para los discos ópticos se les asigna el número 11 para los disquetes es el número 2, /dev, /null y /zero se les asocia el número 1, consolas virtuales y terminales se les asocia el número 4 y los dispositivos vcs1 y vcsa1 se les asocia el número 7.
+9. El primer número del formato, hace alusión al tipo de dispositivo que es, si se tiene un disco SCSI se le asigna el número 8, en 	caso de que sean discos IDE se les asigna el número 3, para los discos ópticos se les asigna el número 11 para los disquetes es el número 2, `/dev`, `/null` y `/zero` se les asocia el número 1, consolas virtuales y terminales se les asocia el número 4 y los dispositivos vcs1 y vcsa1 se les asocia el número 7.
 10. El segundo número, especifica al dispositivo que hay dentro del primer número.
 *	En el tercer campo de la tabla que tiene como nombre "RM" hace alusión a si es extraíble, en caso de que sea extraíble, se despliega un 1 en caso contrario se despliega un 0.
 *	En el quinto campo de la tabla hace referencia a si es solo lectura, en caso de que sea solo lectura, se despliega un 1 en caso contrario se despliega un 0.
@@ -92,7 +93,7 @@
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/3e.png "3e")
 
-16. lsblk -o: Muestra de manera personalizada, la tabla de los dispositivos de bloque, en este ejemplo, vamos a desplegar el nombre y el tamaño, como se puede ver en el ejemplo a continuación, se tiene que escribir el comando que está escrito al principio de la viñeta, después se deja un espacio y se escriben los nombre de las columnas que quieres que aparezcan; si es más de un elemento, va separado por coma.
+16. `lsblk -o`: Muestra de manera personalizada, la tabla de los dispositivos de bloque, en este ejemplo, vamos a desplegar el nombre y el tamaño, como se puede ver en el ejemplo a continuación, se tiene que escribir el comando que está escrito al principio de la viñeta, después se deja un espacio y se escriben los nombre de las columnas que quieres que aparezcan; si es más de un elemento, va separado por coma.
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/3f.png "3f")
 
@@ -101,7 +102,7 @@
 1. Escribir el comando sudo su
 2. Una vez colocado, nos va a solicitar una contraseña, la cual es la que se utiliza para acceder al equipo. Es importante mencionar que al momento de escribir no se desplegara lo ingresado
 3. Si se realizaron los pasos de manera correcta, se mostrará lo siguiente:
-* Una vez que tenemos los permisos de super usuario, escribimos el comando fdisk -l, lo cual nos mostrará la siguiente información:
+* Una vez que tenemos los permisos de super usuario, escribimos el comando `fdisk -l`, lo cual nos mostrará la siguiente información:
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/4a.png "4a")
 
@@ -114,7 +115,7 @@
 5. Para poder salir, solo se coloca el comando exit para salir del modo super usuario, para terminar en la línea de comandos cierra la ventana con el tache que esta en la parte superior derecha de la pantalla.
 ## Conectar una memoria USB y mostrar su tabla de particiones en terminal
 ###### Para mostrar las tablas de particiones, se utiliza el siguiente comando:
-* sudo fdisk -l
+* `sudo fdisk -l`
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/5a.png "5a")
 
