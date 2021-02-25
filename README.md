@@ -56,7 +56,7 @@
 * xDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDddddd
 * En la primera columna del enlistado, se tiene un campo llamado «Name», la cual nos menciona el nombre del dispositivo o de la partición.
 *	En la segunda columna de la tabla, se pude apreciar que hay un campo llamado «Maj:Min» los cuales se explican a continuación:
-..* El término «Maj» hace referencia al término «major».
+.* El término «Maj» hace referencia al término «major».
 **	El término "Min" hace referencia al término «minor».
 **	Estos términos mencionados anteriormente, es la forma la cual el Kernel mediante números enteros se refiere a los dispositivos de manera interna.
 ** -lsblk -b: nos despliega el tamaño de cada dispositivo en bytes, como se puede ver en la imagen a comparación de la imagen anterior, podemos ver que en el campo “size” ya no existe la presencia de letras M, ya que nos los despliega en bytes.
