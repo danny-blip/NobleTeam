@@ -7,10 +7,10 @@
 * Unidad C: primera unidad de disco duro
 * Unidad D: primera unidad de CD/DVD
 ###### En Linux se otorgan diferentes nombres a los discos, y las particiones llegan a ser diferentes a las de otros sistemas operativos. A cada dispositivo se le otorga su posición y particuones. Linux necesita conocer el nombre de los dispositivos para crear y montar sus particiones en disco.
-###### En Linux el nombre de cualquier dispositivo empieza por `/dev/` (device). **********************
-* Para el disco maestro en el controlador IDE primario se le llama `/dev/hda`
-* Para el disco esclavo del controlador IDE primario se le llama `/dev/hdb`
-* Para el disco maestro y esclavo del controlador IDE secundario se le denomina `/dev/hdc` y `/dev/hdd`
+###### En Linux el nombre de cualquier dispositivo empieza por `/dev/` (device).
+* Para el disco maestro en el controlador IDE primario el comando es `/dev/hda`.
+* Para el disco esclavo del controlador IDE primario el comando es `/dev/hdb`.
+* Para el disco maestro y esclavo del controlador IDE secundario el comando `/dev/hdc` y `/dev/hdd`.
 ###### Por otro lado, existen varios tipos de particiones:
 * Primarias: como máximo 4.
 * Extendidas: como máximo 1 (en este caso, tres primarias como máximo).
@@ -22,18 +22,18 @@
 ###### Cuando se habla de `/dev/sda`, debe entenderse que se refiere al primer disco detectado de tipo IDE, SATA, SCSI emulado y virtualizado por el hipervisor, en donde el sistema operativo invitado no sabe que está ejecutándose sobre un hipervisor, es decir, no sabe que está virtualizado y no requiere de cambios para funcionar en la configuración.
 * La primera unidad de disco SCSI (identificación SCSI address-wise) se llama `/dev/sda`.
 * La segunda unidad de disco SCSI (address-wise) se llama `/dev/sdb`, y así sucesivamente.
-###### Las particiones en cada disco se enumeran según el número de particiones por unidad de disco, es decir, si se tiene un sistema de dos discos con dirección SCSI 2 que se llama `/dev/sda` y SCSI 4 se llama `/dev/sdb`. ***************
+###### Las particiones en cada disco se enumeran según el número de particiones por unidad de disco, es decir, si se tiene un sistema de dos discos, uno tiene dirección SCSI 2 y se llama `/dev/sda` y el otro tiene dirección SCSI 4 y se llama `/dev/sdb`.
 ###### Si existen dos particiones de `/dev/sda`, se enumeran de la siguiente forma:
 * `/dev/sda1` -> Primera partición en la primera unidad de disco SCSI del sistema.
 * `/dev/sda2` -> Segunda partición en la primera unidad de disco SCSI del sistema.
 ###### Lo mismo aplica al disco `/dev/sdb` y sus particiones.
 ###### En la paravirtualización, el sistema operativo invitado es consciente de que está siendo ejecutado en un hipervisor y de que incluye código para que las transiciones de invitado a hipervisor sean eficientes.
 ###### Todos los archivos `/dev/vda` se localizan en el espacio asignado de la máquina virtual.
-###### Ejemplo de Xen Virtual Block Device: **************************
-* 0 = `/dev/vda` -> Primera partición en la primera unidad de disco Xen VBD del sistema.
-* 16 = `/dev/vdb` -> Segunda partición en la primera unidad de disco Xen VBD del sistema.
-* 240 = `/dev/vdp` -> Decimosexta partición en la primera unidad de disco Xen VBD del sistema.
-###### La enumeración, es decir, las particiones de vda, se manejan de la misma manera que los discos IDE, las particiones pueden llegar hasta 15 bits.
+###### Ejemplo de Xen Virtual Block Device:
+* `/dev/vda` -> Primera partición en la primera unidad de disco Xen VBD del sistema.
+* `/dev/vdb` -> Segunda partición en la primera unidad de disco Xen VBD del sistema.
+* `/dev/vdp` -> Decimosexta partición en la primera unidad de disco Xen VBD del sistema.
+###### La enumeración, es decir, las particiones de `vda`, se manejan de la misma manera que los discos IDE, las particiones pueden llegar hasta 15 bits.
 ###### La diferencia entre `hda`, `sda` y `vda` es que hda es la partición de disco maestro IDE, mientras que sda son las particiones de disco externo detectado emulado sin que el s.o. invitado sepa que se está ejecutando, mientras que el `vda` el s.o. invitado está consciente de que se ejecuta y de que es un disco virtual en la nube que emula lo que hace un `sda`, pero sin la necesidad de hardware.
 ## ¿Cómo montar y desmontar una USB en el sistema por terminal?
 ###### Primero, se debe saber qué dispositivos están montados, para eso, se utiliza el siguiente comando:
