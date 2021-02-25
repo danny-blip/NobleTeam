@@ -152,29 +152,29 @@
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/8a.png "8a")
 
 ## En la interfaz gráfica de la aplicación «Discos», borrar las particiones para que solo exista una partición que abarque toda la USB
-###### Abrir la aplicación Discos en Ubuntu
+* Abrir la aplicación Discos en Ubuntu
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9a.png "9a")
 
-###### Seleccionar la partición a borrar
+* Seleccionar la partición a borrar
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9b.png "9b")
 
-###### Eliminar la partición
+* Eliminar la partición
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9c.png "9c")
 
-###### Repetir con todas las demás particiones, excepto la uno. Una vez que se tenga solo la primera partición, se selecciona y se da clic en el engranaje.
+* Repetir con todas las demás particiones, excepto la uno. Una vez que se tenga solo la primera partición, se selecciona y se da clic en el engranaje.
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9d.png "9d")
 
-###### Seleccionar la barrita de tamaño actual y arrastratla toda a la derecha para utilizar todo el almacenamiento para esa partición.
+* Seleccionar la barrita de tamaño actual y arrastratla toda hacia la derecha para utilizar todo el almacenamiento para esa partición.
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9e.png "9e")
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9f.png "9f")
 
-###### ¡Y listo!
+* ¡Y listo!
 
 ![alt text](https://github.com/danny-blip/NobleTeam/blob/main/9g.png "9g")
 
