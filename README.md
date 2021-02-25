@@ -101,7 +101,7 @@
 
 * Lo que se acaba de hacer con este comando, es acceder a los enlistados de los discos duros, la que se busca en este caso es la siguiente:
 
-![alt text](https://github.com/danny-blip/NobleTeam/blob/main/4b.png "4b")
+![alt text](https://github.com/danny-blip/NobleTeam/blob/main/4B.png "4b")
 
 * Lo primero que se muestra en la imagen es el disco en donde está instalado el sistema operativo, si se observa en la parte de abajo, hay una tabla, esa es la tabla de particiones del sistema operativo.
 * En caso de que no hubiese tabla, quiere decir que no hay particiones en ese disco.
