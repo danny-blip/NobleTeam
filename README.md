@@ -7,7 +7,7 @@
 * Unidad C: primera unidad de disco duro
 * Unidad D: primera unidad de CD/DVD
 ###### En Linux se otorgan diferentes nombres a los discos, y las particiones llegan a ser diferentes a las de otros sistemas operativos. A cada dispositivo se le otorga su posición y particuones. Linux necesita conocer el nombre de los dispositivos para crear y montar sus particiones en disco.
-###### En Linux el nombre de cualquier dispositivo empieza por `/dev/` (device).
+###### En Linux el nombre de cualquier dispositivo empieza por `/dev/` (device). **********************
 * Para el disco maestro en el controlador IDE primario se le llama `/dev/hda`
 * Para el disco esclavo del controlador IDE primario se le llama `/dev/hdb`
 * Para el disco maestro y esclavo del controlador IDE secundario se le denomina `/dev/hdc` y `/dev/hdd`
@@ -22,7 +22,7 @@
 ###### Cuando se habla de `/dev/sda`, debe entenderse que se refiere al primer disco detectado de tipo IDE, SATA, SCSI emulado y virtualizado por el hipervisor, en donde el sistema operativo invitado no sabe que está ejecutándose sobre un hipervisor, es decir, no sabe que está virtualizado y no requiere de cambios para funcionar en la configuración.
 * La primera unidad de disco SCSI (identificación SCSI address-wise) se llama `/dev/sda`.
 * La segunda unidad de disco SCSI (address-wise) se llama `/dev/sdb`, y así sucesivamente.
-###### Las particiones en cada disco se enumeran según el número de particiones por unidad de disco, es decir, si se tiene un sistema de dos discos con dirección SCSI 2 que se llama `/dev/sda` y SCSI 4 se llama `/dev/sdb`.
+###### Las particiones en cada disco se enumeran según el número de particiones por unidad de disco, es decir, si se tiene un sistema de dos discos con dirección SCSI 2 que se llama `/dev/sda` y SCSI 4 se llama `/dev/sdb`. ***************
 ###### Si existen dos particiones de `/dev/sda`, se enumeran de la siguiente forma:
 * `/dev/sda1` -> 1° partición en la primera unidad de disco SCSI del sistema.
 * `/dev/sda2` -> 2° partición en la primera unidad de disco SCSI del sistema.
